@@ -1,14 +1,13 @@
 import React from 'react';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 const HomePage = () => {
   return(
     <div>
-      <Header />
+      <Layout>
       <h1>Hello, my name is Polina</h1>
       <h2>I am a passinate software developer</h2>
-      <Footer />
+      </Layout>
     </div>
   );
 };

@@ -1,15 +1,14 @@
 import React from 'react';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 const AboutPage = () => {
     return(
         <div>
-            <Header />
+            <Layout>
             <h1>About Page</h1>
             <p>My name is Polina. Here is my story</p>
             <p>Find me on <a href="https://www.github.com/polina-g" target="_blank">Github!</a></p>
-            <Footer />
+            </Layout>
         </div>
     );
 };

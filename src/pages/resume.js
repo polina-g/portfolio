@@ -1,13 +1,12 @@
 import React from 'react';
-import Footer from '../components/footer';
-import Header from '../components/header';
+import Layout from '../components/layout';
 
 const ResumePage = () => {
     return (
         <div>
-            <Header />
+            <Layout>
             <h1>My Resume</h1>
-            <Footer />
+            </Layout>
         </div>
     );
 };
