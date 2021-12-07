@@ -1,6 +1,9 @@
-$color: green;
+@import '../utils/variables';
 
 * {
     box-sizing: border-box;
-    color: $color;
+}
+
+body {
+    margin: 0;
 }
