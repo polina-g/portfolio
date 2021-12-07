@@ -6,7 +6,7 @@ const HomePage = () => {
     <div>
       <Layout>
       <h1>Hello, my name is Polina</h1>
-      <h2>I am a passinate software developer</h2>
+      <h2>I am a passionate software developer</h2>
       </Layout>
     </div>
   );
