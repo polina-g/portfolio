@@ -14,6 +14,8 @@ module.exports = {
       options: {
         path: `./projects`
       }
-    }
+    },
+    `gatsby-plugin-material-ui`,
+    `gatsby-theme-material-ui`,
   ],
 }
