@@ -11,11 +11,20 @@ module.exports = {
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
+      name: `projects`,
       options: {
         path: `./projects`
       }
     },
     `gatsby-plugin-material-ui`,
     `gatsby-theme-material-ui`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `resume`,
+        path: `${__dirname}/resume`,
+      },
+    },
+    `gatsby-transformer-pdf`,
   ],
 }
