@@ -1,27 +1,17 @@
 import React, {useState} from 'react';
 import Layout from '../components/layout';
-import { Document, Page } from 'react-pdf/dist/esm/entry.webpack';
-// import * as resume from '../../resume/Polina G Resume 2021.pdf'
 
 const ResumePage = () => {
-    const [numPages, setNumPages] = useState(null);
-    const [pageNumber, setPageNumber] = useState(1);
-
-    function onDocumentLoadSuccess({ numPages }) {
-        setNumPages(numPages);
-      }
-
     return (
         <div>
             <Layout>
                 <h1>My Resume</h1>
-                <Document file="../../resume/Polina-G-Resume-2021.pdf" onLoadSuccess={onDocumentLoadSuccess} onLoadError={console.error}>
-                    <Page pageNumber={pageNumber} />
-                </Document>
-                <p>Page {pageNumber} of {numPages}</p>
+                <iframe src="https://drive.google.com/file/d/1NRRk0_a1eF4gDwdWrjzGwW_18l30hr6v/preview" width="800" height="480" allow="autoplay"></iframe>
             </Layout>
         </div>
     );
 };
+
+
 
 export default ResumePage;
