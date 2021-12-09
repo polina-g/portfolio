@@ -5,7 +5,7 @@
         "technologies": ["HTML", "CSS", "Javascript", "JQuery", "Third party API"],
         "code":"https://github.com/polina-g/botw-compendium",
         "link":"https://botw-compendium.netlify.app/",
-        "descripion":"A Web application which provides an easy to use interface for searching through and browsing all materials and items found in a popular Nintendo video game with the help of a third party API"
+        "description":"A Web application which provides an easy to use interface for searching through and browsing all materials and items found in a popular Nintendo video game with the help of a third party API"
     },
     {
         "title":"Puzzled",
@@ -13,7 +13,7 @@
         "technologies": ["HTML", "CSS", "Bootstrap", "Javascript", "JQuery", "Express", "EJS", "MongoDB", "Mongoose", "Bcrypt", "Cloudinary"],
         "code":"https://github.com/polina-g/Puzzled",
         "link":"https://ga-puzzled.herokuapp.com/",
-        "descripion":"A full CRUD application using RESTful routing which allows for keeping track of completed puzzles and exchanging them with others in the community"
+        "description":"A full CRUD application using RESTful routing which allows for keeping track of completed puzzles and exchanging them with others in the community"
     },
     {
         "title":"Untangle",
@@ -21,7 +21,7 @@
         "technologies": ["HTML", "CSS", "Sass", "Styled Components", "Material UI", "React", "Google Firebase", "REST API", "Node.js", "Express", "EJS", "MongoDB", "Mongoose"],
         "code":"https://github.com/polina-g/untangle-frontend",
         "link":"https://untangle.netlify.app/",
-        "descripion":"A full CRUD SPA (Single Page Application) for keeping track of personal CBT journal entries as well as sharing them with your therapist"
+        "description":"A full CRUD SPA (Single Page Application) for keeping track of personal CBT journal entries as well as sharing them with your therapist"
     },
     {
         "title":"Tech Talk",
@@ -29,6 +29,6 @@
         "technologies": ["HTML", "CSS", "Javascript", "JQuery", "Python", "Django", "PostgreSQL", "AWS", "Disqus"],
         "code":"https://github.com/polina-g/tech-talk-v2",
         "link":"https://tech-talk-v2.herokuapp.com/",
-        "descripion":"A full CRUD application for creating and sharing blog posts related to the tech industry."
+        "description":"A full CRUD application for creating and sharing blog posts related to the tech industry."
     }
 ]
