@@ -52,7 +52,7 @@ const PortfolioPage = ({data}) => {
                             <Button variant="outlined"><a href={node.code} target="_blank">Glance at the Code</a></Button>
                             <Button variant="outlined"><a href={node.link} target="_blank">Visit website</a></Button>
                           </div>
-                          <h1>{node.title}</h1>
+                          <Typography variant="h3">{node.title}</Typography>
                           <p><b>Technologies:</b> {node.technologies.join(', ')}</p>
                           <p><b>Brief Description:</b> {node.description}</p>
                           {/* 
