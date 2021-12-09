@@ -22,15 +22,14 @@ const PortfolioPage = ({data}) => {
   return (
       <div>
           <Layout>
-          <h1>My Portfolio Page</h1>
-          <Box sx={{ width: '100%' }}>
+          <Typography variant="h2">PORTFOLIO</Typography>
+          <Box sx={{ width: '90%', marginLeft: '5%', marginTop: '40px'}} >
             <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
               <Grid container spacing={2}>
                 <Grid item xs={4} md={2}>
                   <Tabs 
                     value={value} 
                     onChange={handleChange} 
-                    centered
                     orientation="vertical" 
                   >
                     <Tab label="BOTW Compendium"/>
