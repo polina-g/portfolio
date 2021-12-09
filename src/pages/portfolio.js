@@ -3,6 +3,7 @@ import { useState } from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
+import {actionButtons} from './portfolio.module.scss'
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -48,11 +49,13 @@ const PortfolioPage = ({data}) => {
                           <GatsbyImage image={getImage(node.image)} alt="text"/>
                         </Grid>
                         <Grid item xs={6} md={6}>
-                          <Button variant="outlined"><a href={node.code} target="_blank">Glance at the Code</a></Button>
-                          <Button variant="outlined"><a href={node.link} target="_blank">Visit website</a></Button>
+                          <div className={actionButtons}>
+                            <Button variant="outlined"><a href={node.code} target="_blank">Glance at the Code</a></Button>
+                            <Button variant="outlined"><a href={node.link} target="_blank">Visit website</a></Button>
+                          </div>
                           <h1>{node.title}</h1>
-                          <p>Technologies: {node.technologies.join(', ')}</p>
-                          <p>Brief Description: {node.description}</p>
+                          <p><b>Technologies:</b> {node.technologies.join(', ')}</p>
+                          <p><b>Brief Description:</b> {node.description}</p>
                           {/* 
                            */}
                         </Grid>

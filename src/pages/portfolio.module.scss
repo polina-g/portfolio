@@ -1,0 +1,14 @@
+@import '../utils/variables';
+
+.action-buttons {
+    display: flex;
+    gap: 20px;
+
+    button {
+        a {
+            text-decoration: none;
+            color: $theme-purple;
+        }
+        border-color: $theme-purple;
+    }
+}
