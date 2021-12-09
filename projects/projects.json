@@ -1,7 +1,7 @@
 [
     {
         "title":"BOTW Compendium",
-        "image":"./images/flower.jpeg",
+        "image":"./images/botw-screenshot.png",
         "technologies": ["HTML", "CSS", "Javascript", "JQuery", "Third party API"],
         "code":"https://github.com/polina-g/botw-compendium",
         "link":"https://botw-compendium.netlify.app/",
@@ -9,7 +9,7 @@
     },
     {
         "title":"Puzzled",
-        "image":"./images/flower.jpeg",
+        "image":"./images/puzzled-screenshot.png",
         "technologies": ["HTML", "CSS", "Bootstrap", "Javascript", "JQuery", "Express", "EJS", "MongoDB", "Mongoose", "Bcrypt", "Cloudinary"],
         "code":"https://github.com/polina-g/Puzzled",
         "link":"https://ga-puzzled.herokuapp.com/",
@@ -17,7 +17,7 @@
     },
     {
         "title":"Untangle",
-        "image":"./images/flower.jpeg",
+        "image":"./images/untangle-screenshot.png",
         "technologies": ["HTML", "CSS", "Sass", "Styled Components", "Material UI", "React", "Google Firebase", "REST API", "Node.js", "Express", "EJS", "MongoDB", "Mongoose"],
         "code":"https://github.com/polina-g/untangle-frontend",
         "link":"https://untangle.netlify.app/",
@@ -25,7 +25,7 @@
     },
     {
         "title":"Tech Talk",
-        "image":"./images/flower.jpeg",
+        "image":"./images/techtalk-screenshot.png",
         "technologies": ["HTML", "CSS", "Javascript", "JQuery", "Python", "Django", "PostgreSQL", "AWS", "Disqus"],
         "code":"https://github.com/polina-g/tech-talk-v2",
         "link":"https://tech-talk-v2.herokuapp.com/",

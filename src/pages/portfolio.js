@@ -1,6 +1,7 @@
 import React from 'react';
 import Layout from '../components/layout';
 import { graphql } from 'gatsby';
+import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const PortfolioPage = ({data}) => {
     return (
@@ -10,6 +11,7 @@ const PortfolioPage = ({data}) => {
             {
                 data.allProjectsJson.nodes.map(node => (
                     <div key={node.id}>
+                        <GatsbyImage image={getImage(node.image)} alt="text"/>
                         <h2>{node.title}</h2>
                         <p>{node.technologies.join(', ')}</p>
                         <p>{node.description}</p>
@@ -29,9 +31,14 @@ query {
       nodes {
         code
         descripion
-        link
-        technologies
         title
+        technologies
+        link
+        image {
+          childImageSharp {
+            gatsbyImageData
+          }
+        }
       }
     }
   }

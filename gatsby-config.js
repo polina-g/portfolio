@@ -7,7 +7,9 @@ module.exports = {
   },
 
   plugins: [
-    'gatsby-plugin-sass',
+    `gatsby-plugin-sass`,
+    `gatsby-plugin-sharp`,
+    'gatsby-plugin-image',
     `gatsby-transformer-json`,
     {
       resolve: `gatsby-source-filesystem`,
@@ -18,13 +20,7 @@ module.exports = {
     },
     `gatsby-plugin-material-ui`,
     `gatsby-theme-material-ui`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `resume`,
-        path: `${__dirname}/resume`,
-      },
-    },
     `gatsby-transformer-pdf`,
+    `gatsby-transformer-sharp`,
   ],
 }
