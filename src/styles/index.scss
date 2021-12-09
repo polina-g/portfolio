@@ -6,6 +6,7 @@
 
 body {
     margin: 0;
-    background: $theme-light-grey url('../../static/istockphoto-1161094733-612x612.jpg') no-repeat fixed right;
+    background: url('../../static/istockphoto-1161094733-612x612.jpg') no-repeat fixed right;
+    background-color: $theme-light-grey;
     background-size: 50%;
 }

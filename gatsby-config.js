@@ -15,7 +15,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       name: `projects`,
       options: {
-        path: `./projects`
+        path: `./data`
       }
     },
     `gatsby-plugin-material-ui`,
