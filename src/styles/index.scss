@@ -10,3 +10,7 @@ body {
     background-color: $theme-light-grey !important;
     background-size: 50%;
 }
+
+html {
+    overflow-y: scroll;
+} 

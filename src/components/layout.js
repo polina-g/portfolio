@@ -11,7 +11,13 @@ const Layout = ({ children }) => {
             background: {
                 paper: 'rgba(255, 255, 255, 0.9)',
                 default: '#f6f6f6',
-            }
+            },
+            primary: {
+                main: '#6A527E',
+              },
+            secondary: {
+                main: '#D67725',
+              },
         }
       });
 

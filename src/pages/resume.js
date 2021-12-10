@@ -11,11 +11,11 @@ const ResumePage = () => {
             <Layout>
                 <Typography variant="h2">RESUME</Typography>
                 <div className={resumeContainer}>
-                    <iframe src={resume} width="100%" height="480"></iframe>
                     <div className={actionButtons}>
-                        <Button variant="contained" className={resumeButton}><a href={resume} target="_blank" >View Separately</a></Button>
-                        <Button variant="contained" className={resumeButton}><a href={resume} download>Download</a></Button>
+                        <Button variant="contained" className={resumeButton} size="large" color="secondary"><a href={resume} target="_blank" >View Separately</a></Button>
+                        <Button variant="contained" className={resumeButton} size="large" color="secondary"><a href={resume} download>Download</a></Button>
                     </div>
+                    <iframe src={resume} width="85%" height="480"></iframe>
                 </div>
             </Layout>
         </div>
