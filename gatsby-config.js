@@ -4,6 +4,7 @@ module.exports = {
   siteMetadata: {
     title: 'My Portfolio',
     author: 'Polina Gorbunova',
+    avatar: './static/portfolio-avatar.png'
   },
 
   plugins: [
