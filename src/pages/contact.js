@@ -10,7 +10,7 @@ import Button from '@mui/material/Button';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
-import {contactButtons} from './contact.module.scss'
+import {contactButtons, formContainer} from './contact.module.scss'
 
 const ContactPage = () => {
     const [formState, setFormState] = useState({
@@ -45,7 +45,7 @@ const ContactPage = () => {
                     alignItems='center'
                 >   
                     <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
-                        <FormControl sx={{width: '60%', ml:'10px'}}>
+                        <FormControl sx={{width: '60%', ml:'10px'}} className={formContainer}>
                             <Typography
                                 variant='h3'
                                 color='primary'
@@ -97,7 +97,7 @@ const ContactPage = () => {
                             </Button>
                         </FormControl>
                         <div className={contactButtons}>
-                            <Typography variant="h4">Find me on Social Media</Typography>
+                            <Typography variant="h4" color="primary">Find Me On Social Media</Typography>
                             <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
                                 GITHUB
                             </Button>

@@ -8,7 +8,11 @@ body {
     margin: 0;
     background: url('../../static/istockphoto-1161094733-612x612.jpg') no-repeat fixed right;
     background-color: $theme-light-grey !important;
-    background-size: 50%;
+    background-size: 40%;
+    display: flex;
+    flex-direction: column;
+    background-size: contain;
+    margin-top: -20px;
 }
 
 html {
