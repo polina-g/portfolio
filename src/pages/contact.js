@@ -45,57 +45,73 @@ const ContactPage = () => {
                     alignItems='center'
                 >   
                     <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
-                        <FormControl sx={{width: '60%', ml:'10px'}} className={formContainer}>
-                            <Typography
-                                variant='h3'
-                                color='primary'
-                                fontWeight='light'
-                                sx={{mt: 3, mb: 3}}
-                            >
-                            Email Me
-                            </Typography>
-                            <TextField
-                            type='text'
-                            label='Full Name'
-                            autoComplete='off'
-                            margin='normal'
-                            onChange={handleChange}
-                            value={formState.full_name}
-                            name='full_name'
-                            required
-                            helperText="Please enter your full name"
-                            />
+                        <form onSubmit={handleSumbit} className={formContainer}>
+                            <FormControl fullWidth>
+                                <Typography
+                                    variant='h3'
+                                    color='primary'
+                                    fontWeight='light'
+                                    sx={{mt: 3, mb: 3}}
+                                >
+                                    Email Me
+                                </Typography>
+                                <TextField
+                                type='text'
+                                label='Full Name'
+                                autoComplete='off'
+                                margin='normal'
+                                onChange={handleChange}
+                                value={formState.full_name}
+                                name='full_name'
+                                required
+                                helperText="Please enter your full name"
+                                />
 
-                            <TextField
-                            type='text'
-                            label='E-mail'
-                            name='email'
-                            autoComplete='off'
-                            margin='normal'
-                            fullWidth
-                            required
-                            onChange={handleChange}
-                            value={formState.email}
-                            sx={{mb: 3}}
-                            helperText="Please enter your email"
-                            />
+                                <TextField
+                                type='email'
+                                label='E-mail'
+                                name='email'
+                                autoComplete='off'
+                                margin='normal'
+                                fullWidth
+                                required
+                                onChange={handleChange}
+                                value={formState.email}
+                                sx={{mb: 3}}
+                                helperText="Please enter your email"
+                                />
 
-                            <TextField
-                            label="Message"
-                            name="message"
-                            multiline
-                            minRows={10}
-                            value={formState.message}
-                            onChange={handleChange}
-                            />
-                            <Button 
-                                type='submit' 
-                                variant='contained' 
-                                sx={{mt: '1rem', width:'20%'}}
-                            >
-                                Send Email
-                            </Button>
-                        </FormControl>
+                                <TextField
+                                type='text'
+                                label='Subject'
+                                name='subject'
+                                autoComplete='off'
+                                margin='normal'
+                                fullWidth
+                                onChange={handleChange}
+                                value={formState.sunject}
+                                sx={{mb: 3}}
+                                helperText="Please enter a subject"
+                                />
+
+                                <TextField
+                                label="Message"
+                                name="message"
+                                multiline
+                                minRows={10}
+                                value={formState.message}
+                                onChange={handleChange}
+                                required
+                                />
+                                <Button 
+                                    type='submit' 
+                                    variant='contained' 
+                                    sx={{mt: '1rem', width:'20%'}}
+                                >
+                                    Send Email
+                                </Button>
+                            </FormControl>
+                        </form>
                         <div className={contactButtons}>
                             <Typography variant="h4" color="primary">Find Me On Social Media</Typography>
                             <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
