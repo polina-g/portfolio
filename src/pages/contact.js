@@ -11,7 +11,7 @@ const ContactPage = () => {
     const [formState, setFormState] = useState({
         full_name: '',
         email: '',
-        message: ''
+        message: '',
     });
 
     const handleChange = (event) => {
@@ -68,8 +68,9 @@ const ContactPage = () => {
 
                             <TextField
                             label="Message"
+                            name="message"
                             multiline
-                            maxRows={10}
+                            minRows={10}
                             value={formState.message}
                             onChange={handleChange}
                             />
@@ -77,7 +78,6 @@ const ContactPage = () => {
                         </FormControl>
                     </Paper>    
                 </Box>
-
             </Layout>
         </div>
     );

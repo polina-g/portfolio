@@ -22,7 +22,7 @@ const Header = () => {
                     <li>
                         <Link 
                             className={link} 
-                            activeClassName={activeLink} to="/"><StaticImage alt="avatar outline" src="../../static/portfolio-avatar.png" width="60"/>
+                            activeClassName={activeLink} to="/"><StaticImage alt="avatar outline" src="../../static/portfolio-avatar.png" width={60}/>
                         </Link>
                     </li>
                     <li>
