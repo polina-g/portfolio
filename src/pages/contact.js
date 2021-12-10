@@ -31,7 +31,7 @@ const ContactPage = () => {
                     alignItems='center'
                 >
                     <Paper elevation={5} sx={{width: '100%', p: '1rem'}}>
-                        <FormControl>
+                        <FormControl sx={{width: '80%'}}>
                             <Typography
                                 variant='h3'
                                 color='primary'
