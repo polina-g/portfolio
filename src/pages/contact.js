@@ -6,6 +6,11 @@ import Box from '@mui/system/Box';
 import Paper from '@mui/material/Paper';
 import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import {contactButtons} from './contact.module.scss'
 
 const ContactPage = () => {
     const [formState, setFormState] = useState({
@@ -14,11 +19,20 @@ const ContactPage = () => {
         message: '',
     });
 
-    const handleChange = (event) => {
+    const handleChange = event => {
         setFormState(prevState => ({
           ...prevState,
           [event.target.name]: event.target.value
         }));
+      };
+
+      const handleSumbit = event => {
+        event.preventDefault();
+        setFormState({
+            full_name: '',
+            email: '',
+            message: '',
+        });
       };
 
     return (
@@ -26,19 +40,19 @@ const ContactPage = () => {
             <Layout>
                 <Typography variant="h2">CONTACT ME</Typography>
                 <Box 
-                    sx={{width: '70%', mt:5, ml:'15%'}}
+                    sx={{width: '90%', mt:5, ml:'5%'}}
                     justifyContent='center'
                     alignItems='center'
-                >
-                    <Paper elevation={5} sx={{width: '100%', p: '1rem'}}>
-                        <FormControl sx={{width: '80%'}}>
+                >   
+                    <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
+                        <FormControl sx={{width: '60%', ml:'10px'}}>
                             <Typography
                                 variant='h3'
                                 color='primary'
                                 fontWeight='light'
                                 sx={{mt: 3, mb: 3}}
                             >
-                            Send me and e-mail 
+                            Email Me
                             </Typography>
                             <TextField
                             type='text'
@@ -74,8 +88,26 @@ const ContactPage = () => {
                             value={formState.message}
                             onChange={handleChange}
                             />
-
+                            <Button 
+                                type='submit' 
+                                variant='contained' 
+                                sx={{mt: '1rem', width:'20%'}}
+                            >
+                                Send Email
+                            </Button>
                         </FormControl>
+                        <div className={contactButtons}>
+                            <Typography variant="h4">Find me on Social Media</Typography>
+                            <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
+                                GITHUB
+                            </Button>
+                            <Button variant="outlined" startIcon={<LinkedInIcon />} size="large">
+                                LINKEDIN
+                            </Button>
+                            <Button variant="outlined" startIcon={<TwitterIcon />} size="large">
+                                TWITTER
+                            </Button>
+                        </div>
                     </Paper>    
                 </Box>
             </Layout>
