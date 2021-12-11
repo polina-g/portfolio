@@ -1,5 +1,4 @@
 import React from 'react';
-import { useState } from 'react';
 import Layout from '../components/layout';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/system/Box';
@@ -13,28 +12,6 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import {contactButtons, formContainer} from './contact.module.scss'
 
 const ContactPage = () => {
-    // const [formState, setFormState] = useState({
-    //     full_name: '',
-    //     email: '',
-    //     message: '',
-    // });
-
-    // const handleChange = event => {
-    //     setFormState(prevState => ({
-    //       ...prevState,
-    //       [event.target.name]: event.target.value
-    //     }));
-    //   };
-
-    //   const handleSumbit = event => {
-    //     event.preventDefault();
-    //     setFormState({
-    //         full_name: '',
-    //         email: '',
-    //         message: '',
-    //     });
-    //   };
-
     return (
         <div>
             <Layout>
@@ -113,13 +90,13 @@ const ContactPage = () => {
                         <div className={contactButtons}>
                             <Typography variant="h4" color="primary">Find Me On Social Media</Typography>
                             <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
-                                <a href="https://github.com/polina-g" target="_blank">GITHUB</a>
+                                <a href="https://github.com/polina-g" target="_blank" rel="noreferrer">GITHUB</a>
                             </Button>
                             <Button variant="outlined" startIcon={<LinkedInIcon />} size="large">
-                                <a href="https://www.linkedin.com/in/polina-g/" target="_blank">LINKEDIN</a>
+                                <a href="https://www.linkedin.com/in/polina-g/" target="_blank" rel="noreferrer">LINKEDIN</a>
                             </Button>
                             <Button variant="outlined" startIcon={<TwitterIcon />} size="large">
-                                <a href="https://twitter.com/ThisIsPolinaG" target="_blank">TWITTER</a>
+                                <a href="https://twitter.com/ThisIsPolinaG" target="_blank" rel="noreferrer">TWITTER</a>
                             </Button>
                         </div>
                     </Paper>    

@@ -19,26 +19,27 @@ const HomePage = () => {
   const [fadeButtonThree, setFadeButtonThree] = useState(false)
 
   const handleSlide = () => {
+    let timeout = 500
     setTimeout(() => {
       setSlideOne(true)
       setSlideTwo(true)
-    }, 500);
+    }, timeout);
 
     setTimeout(() => {
       setSlideThree(true)
-    }, 1500);
+    }, timeout + 500);
 
     setTimeout(() => {
       setFadeButtonOne(true)
-    }, 2500);
+    }, timeout + 1500);
 
     setTimeout(() => {
       setFadeButtonTwo(true)
-    }, 3000);
+    }, timeout + 2000);
 
     setTimeout(() => {
       setFadeButtonThree(true)
-    }, 3500);
+    }, timeout + 2500);
   }
 
   useEffect(() => {
@@ -60,24 +61,24 @@ const HomePage = () => {
             </Typography>
           </Slide>
           <Slide direction="up" in={slideThree}>
-            <Typography variant="h3" color="primary">
+            <Typography variant="h3" color="primary" sx={{mt: "10px"}}>
               I am a Software Developer.
             </Typography>
           </Slide>
           <div className={contactButtons}>
             <Fade in={fadeButtonOne}>
               <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
-                  <a href="https://github.com/polina-g" target="_blank">GITHUB</a>
+                  <a href="https://github.com/polina-g" target="_blank" rel="noreferrer">GITHUB</a>
               </Button>
             </Fade>
             <Fade in={fadeButtonTwo}>
               <Button variant="outlined" startIcon={<LinkedInIcon />} size="large">
-                  <a href="https://www.linkedin.com/in/polina-g/" target="_blank">LINKEDIN</a>
+                  <a href="https://www.linkedin.com/in/polina-g/" target="_blank" rel="noreferrer">LINKEDIN</a>
               </Button>
             </Fade>
             <Fade in={fadeButtonThree}>
               <Button variant="outlined" startIcon={<TwitterIcon />} size="large">
-                  <a href="https://twitter.com/ThisIsPolinaG" target="_blank">TWITTER</a>
+                  <a href="https://twitter.com/ThisIsPolinaG" target="_blank" rel="noreferrer">TWITTER</a>
               </Button>
             </Fade>
           </div>
