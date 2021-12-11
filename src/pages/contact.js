@@ -45,7 +45,13 @@ const ContactPage = () => {
                     alignItems='center'
                 >   
                     <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
-                        <form name="contact" method="POST" data-netlify="true" className={formContainer}>
+                        <form 
+                            name="contact-me" 
+                            method="POST"
+                            data-netlify="true" 
+                            data-netlify-honeypot="bot-field" 
+                            className={formContainer}>
+                            <input type="hidden" name="form-name" value="contact-me" />
                             <FormControl fullWidth>
                                 <Typography
                                     variant='h3'
