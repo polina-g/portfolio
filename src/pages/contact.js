@@ -113,13 +113,13 @@ const ContactPage = () => {
                         <div className={contactButtons}>
                             <Typography variant="h4" color="primary">Find Me On Social Media</Typography>
                             <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
-                                GITHUB
+                                <a href="https://github.com/polina-g" target="_blank">GITHUB</a>
                             </Button>
                             <Button variant="outlined" startIcon={<LinkedInIcon />} size="large">
-                                LINKEDIN
+                                <a href="https://www.linkedin.com/in/polina-g/" target="_blank">LINKEDIN</a>
                             </Button>
                             <Button variant="outlined" startIcon={<TwitterIcon />} size="large">
-                                TWITTER
+                                <a href="https://twitter.com/ThisIsPolinaG" target="_blank">TWITTER</a>
                             </Button>
                         </div>
                     </Paper>    
