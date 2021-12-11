@@ -13,27 +13,27 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import {contactButtons, formContainer} from './contact.module.scss'
 
 const ContactPage = () => {
-    const [formState, setFormState] = useState({
-        full_name: '',
-        email: '',
-        message: '',
-    });
+    // const [formState, setFormState] = useState({
+    //     full_name: '',
+    //     email: '',
+    //     message: '',
+    // });
 
-    const handleChange = event => {
-        setFormState(prevState => ({
-          ...prevState,
-          [event.target.name]: event.target.value
-        }));
-      };
+    // const handleChange = event => {
+    //     setFormState(prevState => ({
+    //       ...prevState,
+    //       [event.target.name]: event.target.value
+    //     }));
+    //   };
 
-      const handleSumbit = event => {
-        event.preventDefault();
-        setFormState({
-            full_name: '',
-            email: '',
-            message: '',
-        });
-      };
+    //   const handleSumbit = event => {
+    //     event.preventDefault();
+    //     setFormState({
+    //         full_name: '',
+    //         email: '',
+    //         message: '',
+    //     });
+    //   };
 
     return (
         <div>
@@ -45,7 +45,7 @@ const ContactPage = () => {
                     alignItems='center'
                 >   
                     <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
-                        <form onSubmit={handleSumbit} className={formContainer}>
+                        <form name="contact" method="POST" data-netlify="true" action="src/pages/contact">
                             <FormControl fullWidth>
                                 <Typography
                                     variant='h3'
@@ -60,8 +60,6 @@ const ContactPage = () => {
                                 label='Full Name'
                                 autoComplete='off'
                                 margin='normal'
-                                onChange={handleChange}
-                                value={formState.full_name}
                                 name='full_name'
                                 required
                                 helperText="Please enter your full name"
@@ -75,8 +73,6 @@ const ContactPage = () => {
                                 margin='normal'
                                 fullWidth
                                 required
-                                onChange={handleChange}
-                                value={formState.email}
                                 sx={{mb: 3}}
                                 helperText="Please enter your email"
                                 />
@@ -88,8 +84,6 @@ const ContactPage = () => {
                                 autoComplete='off'
                                 margin='normal'
                                 fullWidth
-                                onChange={handleChange}
-                                value={formState.sunject}
                                 sx={{mb: 3}}
                                 helperText="Please enter a subject"
                                 />
@@ -99,8 +93,6 @@ const ContactPage = () => {
                                 name="message"
                                 multiline
                                 minRows={10}
-                                value={formState.message}
-                                onChange={handleChange}
                                 required
                                 />
                                 <Button 
