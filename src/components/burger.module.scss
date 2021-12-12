@@ -1,0 +1,17 @@
+@import '../utils/variables';
+
+.link {
+    text-decoration: none;
+    color: $theme-purple;
+}
+
+.menu-icon {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    box-shadow: 2px 10px 15px -3px rgba(0,0,0,0.38);
+    -webkit-box-shadow: 2px 10px 15px -3px rgba(0,0,0,0.38);
+    -moz-box-shadow: 2px 10px 15px -3px rgba(0,0,0,0.38);
+}
+
+
+
