@@ -16,7 +16,7 @@ const ContactPage = () => {
     return (
         <div>
             <Layout>
-                <Typography variant="h2" color="secondary">CONTACT ME</Typography>
+                <Typography variant="h2" color="secondary" sx={{ml: "5%"}}>CONTACT ME</Typography>
                 <Slide direction="right" in="true">
                     <div>    
                         <Box 

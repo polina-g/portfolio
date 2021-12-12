@@ -10,7 +10,7 @@ const ResumePage = () => {
     return (
         <div>
             <Layout>
-                <Typography variant="h2" color="secondary">RESUME</Typography>
+                <Typography variant="h2" color="secondary" sx={{ml: "5%"}}>RESUME</Typography>
                 <Slide direction="right" in="true">
                 <div className={resumeContainer}>
                     <div className={actionButtons}>

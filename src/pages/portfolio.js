@@ -23,7 +23,7 @@ const PortfolioPage = ({data}) => {
   return (
       <div>
           <Layout>
-          <Typography variant="h2" color="secondary">PORTFOLIO</Typography>
+          <Typography variant="h2" color="secondary" sx={{ml: "5%"}}>PORTFOLIO</Typography>
           <Slide direction="right" in="true">
             <Box sx={{ width: '90%', marginLeft: '5%', marginTop: '40px'}} >
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>

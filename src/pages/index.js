@@ -51,7 +51,7 @@ const HomePage = () => {
       <Layout>
         <div className={indexContainer}>
           <Slide direction="right" in={slideOne}>
-            <Typography variant="h1" color="secondary">
+            <Typography variant="h1" color="secondary" sx={{ml: "5%"}}>
               Hey there!
             </Typography>
           </Slide>
