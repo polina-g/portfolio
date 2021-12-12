@@ -1,6 +1,9 @@
 .about-me-container {
     display: flex;
     gap: 20px;
+    @media (max-width: 780px) {
+          flex-direction: column;
+    }
 }
 
 .image {
