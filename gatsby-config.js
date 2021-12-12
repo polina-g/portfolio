@@ -11,17 +11,18 @@ module.exports = {
     `gatsby-plugin-sass`,
     `gatsby-plugin-sharp`,
     'gatsby-plugin-image',
+    'gatsby-plugin-mdx',
     `gatsby-transformer-json`,
+    `gatsby-transformer-pdf`,
+    `gatsby-transformer-sharp`,
     {
       resolve: `gatsby-source-filesystem`,
-      name: `projects`,
+      name: `data`,
       options: {
         path: `./data`
       }
     },
     `gatsby-plugin-material-ui`,
     `gatsby-theme-material-ui`,
-    `gatsby-transformer-pdf`,
-    `gatsby-transformer-sharp`,
   ],
 }
