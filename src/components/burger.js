@@ -1,10 +1,11 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { menuIcon, link } from './burger.module.scss';
+import { menuIcon, link, menuContainer } from './burger.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
+import Divider from '@mui/material/Divider';
 import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 const Header = () => {
@@ -16,31 +17,35 @@ const Header = () => {
                         <Button {...bindTrigger(popupState)} >
                             <StaticImage alt="avatar outline" src="../../static/portfolio-avatar.png" width={60}/>
                         </Button>
-                        <Menu {...bindMenu(popupState)}>
+                        <Menu {...bindMenu(popupState)} className={menuContainer}>
                             <MenuItem onClick={popupState.close}>
                                 <Link 
                                     className={link} 
                                     to="/">Home
                                 </Link>
                             </MenuItem>
+                            <Divider />
                             <MenuItem onClick={popupState.close}>
                                 <Link 
                                     className={link}
                                     to="/about">About
                                 </Link>
                             </MenuItem>
+                            <Divider />
                             <MenuItem onClick={popupState.close}>
                                 <Link 
                                     className={link}
                                     to="/portfolio">Portfolio
                                 </Link>
                             </MenuItem>
+                            <Divider />
                             <MenuItem onClick={popupState.close}>
                                 <Link 
                                     className={link}
                                     to="/resume">Resume
                                 </Link>
                             </MenuItem>
+                            <Divider />
                             <MenuItem onClick={popupState.close}>
                                 <Link 
                                     className={link}
