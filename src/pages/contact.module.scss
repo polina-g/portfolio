@@ -25,3 +25,22 @@
     width: 60%;
     margin-left: 10px;
 }
+
+.container {
+    @media (max-width: 780px) {
+        display: flex;
+        flex-direction: column;
+        .form-container {
+            width: 100%;
+            border-right: none;
+            border-bottom: 1px solid $theme-purple;
+            padding-bottom: 20px;
+        }
+
+        .contact-buttons {
+            justify-content: center;
+            width: 100%;
+            text-align: center;
+        }
+  }
+}

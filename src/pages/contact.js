@@ -10,7 +10,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import Slide from '@mui/material/Slide';
-import {contactButtons, formContainer} from './contact.module.scss'
+import {contactButtons, formContainer, container} from './contact.module.scss'
 
 const ContactPage = () => {
     return (
@@ -24,7 +24,7 @@ const ContactPage = () => {
                             justifyContent='center'
                             alignItems='center'
                         >   
-                            <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}}>
+                            <Paper elevation={5} sx={{width: '100%', p: '1rem', display:'flex'}} className={container}>
                                 <form 
                                     name="contact-me" 
                                     method="POST"
@@ -84,7 +84,7 @@ const ContactPage = () => {
                                         <Button 
                                             type='submit' 
                                             variant='contained' 
-                                            sx={{mt: '1rem', width:'20%'}}
+                                            sx={{mt: '1rem', width:'50%', ml:'25%'}}
                                         >
                                             Send Email
                                         </Button>

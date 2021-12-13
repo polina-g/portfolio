@@ -8,6 +8,7 @@
     height: 120px;
     background-color: $theme-light-grey;
     padding-top: 20px;
+    margin-bottom: 50px;
     ul {
         display: flex;
         justify-content: center;
@@ -19,7 +20,6 @@
         font-size: 1.4rem;
         min-width: 10rem;
     }
-    margin-bottom: 50px;
 }
 
 .link {
