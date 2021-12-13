@@ -8,6 +8,11 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    @media (max-width: 380px) {
+        .actionButtons {
+            gap: 20px;
+        }
+    }
 }
 
 .actionButtons {
