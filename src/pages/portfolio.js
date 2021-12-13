@@ -4,6 +4,7 @@ import Layout from '../components/layout';
 import { graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {actionButtons} from './portfolio.module.scss'
+import useMediaQuery from '../utils/useMediaQuery';
 
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
@@ -16,6 +17,7 @@ import { Slide } from '@mui/material';
 
 const PortfolioPage = ({data}) => {
   const [value, setValue] = useState(0);
+  const isQuery = useMediaQuery('(max-width: 770px)');
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -28,11 +30,14 @@ const PortfolioPage = ({data}) => {
             <Box sx={{ width: '90%', marginLeft: '5%', marginTop: '40px'}} >
               <Box sx={{ borderBottom: 1, borderColor: 'divider' }}>
                 <Grid container spacing={2}>
-                  <Grid item xs={4} md={2}>
+                  <Grid item xs={12} md={2}>
                     <Tabs 
                       value={value} 
                       onChange={handleChange} 
-                      orientation="vertical" 
+                      orientation={isQuery ? 'horizontal' : 'vertical'}
+                      variant={isQuery ? 'scrollable' : ''}
+                      scrollButtons={isQuery ? 'auto' : ''} 
+                      allowScrollButtonsMobile
                     >
                       <Tab label="BOTW Compendium"/>
                       <Tab label="Puzzled"/>
@@ -40,21 +45,21 @@ const PortfolioPage = ({data}) => {
                       <Tab label="Tech Talk"/>
                     </Tabs>
                   </Grid>
-                  <Grid item xs={8} md={10}>
+                  <Grid item xs={12} md={10}>
                     {
                   data.allProjectsJson.nodes.map((node, idx) => (
                     <Paper>
                       <TabPanel key={node.id} value={value} index={idx}>
                         <Grid container spacing={3}>
-                          <Grid item xs={6} md={6}>
+                          <Grid item xs={12} md={6}>
                             <GatsbyImage image={getImage(node.image)} alt="text"/>
                           </Grid>
-                          <Grid item xs={6} md={6}>
+                          <Grid item xs={12} md={6}>
                             <div className={actionButtons}>
                               <Button variant="outlined"><a href={node.code} target="_blank">Glance at the Code</a></Button>
                               <Button variant="outlined"><a href={node.link} target="_blank">Visit website</a></Button>
                             </div>
-                            <Typography variant="h3">{node.title}</Typography>
+                            <Typography variant={isQuery ? "h4" : "h3"}>{node.title}</Typography>
                             <p><b>Technologies:</b> {node.technologies.join(', ')}</p>
                             <p><b>Brief Description:</b> {node.description}</p>
                             {/* 
@@ -68,7 +73,6 @@ const PortfolioPage = ({data}) => {
                   </Grid>
                 </Grid>
               </Box>
-              
             </Box>
           </Slide>
           </Layout>
