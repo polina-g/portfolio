@@ -1,7 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import Layout from '../components/layout';
-import {indexContainer, contactButtons} from './index.module.scss'
+import {indexContainer, contactButtons, introContainer} from './index.module.scss'
 import Typography from '@mui/material/Typography';
 import Slide from '@mui/material/Slide';
 import Fade from '@mui/material/Fade';
@@ -50,6 +50,7 @@ const HomePage = () => {
     <div>
       <Layout>
         <div className={indexContainer}>
+          <div className={introContainer}>
           <Slide direction="right" in={slideOne}>
             <Typography variant="h1" color="secondary" sx={{ml: "5%"}}>
               Hey there!
@@ -65,6 +66,7 @@ const HomePage = () => {
               I am a Software Developer.
             </Typography>
           </Slide>
+          </div>
           <div className={contactButtons}>
             <Fade in={fadeButtonOne}>
               <Button variant="outlined" startIcon={<GitHubIcon />} size="large">
