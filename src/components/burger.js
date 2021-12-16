@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import { menuIcon, link, menuContainer } from './burger.module.scss';
+import { nav, link, menuContainer } from './burger.module.scss';
 import { StaticImage } from 'gatsby-plugin-image';
 import Button from '@mui/material/Button';
 import Menu from '@mui/material/Menu';
@@ -10,7 +10,8 @@ import PopupState, { bindTrigger, bindMenu } from 'material-ui-popup-state';
 
 const Header = () => {
     return (
-        <header className={menuIcon}>
+        <header>
+            <nav className={nav}>
             <PopupState variant="popover" popupId="demo-popup-menu">
                 {(popupState) => (
                     <React.Fragment>
@@ -56,6 +57,7 @@ const Header = () => {
                     </React.Fragment>
                 )}
             </PopupState>
+            </nav>
         </header>
     );
 };
